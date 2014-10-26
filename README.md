@@ -30,7 +30,7 @@ Map<Integer, MyObject> mapReloaded = objectStore.getMap("keyMap", Integer.class,
 
 Asynchronous storing and loading:
 ```
-store.async().store("myObject", myObject, new StoreCallback<MyObject>(){
+objectStore.async().store("myObject", myObject, new StoreCallback<MyObject>(){
 		@Override
 		public void onStored(String identifier, MyObject object,
 				boolean success) {
@@ -39,7 +39,7 @@ store.async().store("myObject", myObject, new StoreCallback<MyObject>(){
 });
 		
 		
-store.async().get("myObject", TestObject.class, new GetCallback<TestObject>(){
+objectStore.async().get("myObject", TestObject.class, new GetCallback<TestObject>(){
 		@Override
 		public void onGot(String identifier, TestObject object) {
 			// object loaded.
