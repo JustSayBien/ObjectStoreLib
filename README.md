@@ -39,9 +39,9 @@ objectStore.async().store("myObject", myObject, new StoreCallback<MyObject>(){
 });
 		
 		
-objectStore.async().get("myObject", TestObject.class, new GetCallback<TestObject>(){
+objectStore.async().get("myObject", MyObject.class, new GetCallback<MyObject>(){
 		@Override
-		public void onGot(String identifier, TestObject object) {
+		public void onGot(String identifier, MyObject object) {
 			// object loaded.
 		}
 });
